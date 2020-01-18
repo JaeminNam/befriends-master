@@ -7,7 +7,9 @@ export default {
             const {email, password} = args;
             const user = await prisma.user({email});
             if (email === user.email && password === user.password) {
-                return generateToken(user.id);
+                const genKey = generateToken(user.id);
+                // console.log(genKey);
+                return genKey;
             }else{
                 throw Error("Wrong Email");
             }
