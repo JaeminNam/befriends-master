@@ -1,0 +1,6 @@
+endpoint: https://us1.prisma.sh/happy0351-89cc2c/befriends-master/dev
+datamodel: datamodel.prisma
+
+generate:
+  - generator: javascript-client
+    output: ./generated/prisma-client/
